@@ -7,8 +7,6 @@ notifications:
 node_js:
   - '10'
   - '11'
-  - '8'
-  - '6'
 script:
   - yarn test:prod && yarn build
 after_success:

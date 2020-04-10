@@ -20,9 +20,9 @@
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="styled with prettier" />
   </a>
-  <!-- Greenkeeper -->
-  <a href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/thiagozf/rimo.svg" />
+  <!-- Snyk -->
+  <a href="https://snyk.io/test/github/thiagozf/rimo">
+    <img src="https://snyk.io/test/github/thiagozf/rimo/badge.svg" />
   </a>
   <!-- Travis -->
   <a href="https://travis-ci.org/thiagozf/rimo">
@@ -36,7 +36,7 @@
 
 <br />
 <div align="center">
-  <sub>Created by <a href="https://github.com/thiagozf">Thiago Zanivan</a> and maintained with ❤️ by an amazing <a href="#credit">community</a>.</sub>
+  <sub>Created by <a href="https://github.com/thiagozf">Thiago Zanivan</a> and maintained with ❤️ by an amazing <a href="#credits">community</a>.</sub>
 </div>
 
 ## Usage

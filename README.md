@@ -1,8 +1,49 @@
+<img src="https://raw.githubusercontent.com/thiagozf/rimo/master/rimo.png" alt="rimo banner" align="center" />
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-## Contributors ✨
+<br />
+
+<div align="center"><strong>Build rich data models with Rimo!</strong></div>
+<div align="center">Rimo is an extensible set of functions that helps you to build rich domain data models through composition.</div>
+
+<br />
+
+<div align="center">
+  <!-- Dependency Status -->
+  <a href="https://david-dm.org/thiagozf/rimo">
+    <img src="https://david-dm.org/thiagozf/rimo.svg" alt="Dependency Status" />
+  </a>
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/thiagozf/rimo#info=devDependencies">
+    <img src="https://david-dm.org/thiagozf/rimo/dev-status.svg" alt="devDependency Status" />
+  </a>
+  <!-- Prettier -->
+  <a href="https://github.com/prettier/prettier">
+    <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="styled with prettier" />
+  </a>
+  <!-- Greenkeeper -->
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/thiagozf/rimo.svg" />
+  </a>
+  <!-- Travis -->
+  <a href="https://travis-ci.org/thiagozf/rimo">
+    <img src="https://img.shields.io/travis/thiagozf/rimo.svg" />
+  </a>
+  <!-- Coveralls -->
+  <a href="https://coveralls.io/github/thiagozf/rimo">
+    <img src="https://img.shields.io/coveralls/thiagozf/rimo.svg" />
+  </a>
+</div>
+
+<br />
+<div align="center">
+  <sub>Created by <a href="https://github.com/thiagozf">Thiago Zanivan</a> and maintained with ❤️ by an amazing <a href="#credit">community</a>.</sub>
+</div>
+
+## Usage
+
+TODO :)
+
+## Credits
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -17,6 +58,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!

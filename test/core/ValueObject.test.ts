@@ -1,4 +1,4 @@
-import { ValueObject } from '../src/ValueObject'
+import { ValueObject } from '@rimo/core'
 
 /**
  * ValueObject test

@@ -1,4 +1,4 @@
-import { Identifier } from '../src/Identifier'
+import { Identifier } from '@rimo/core'
 
 /**
  * Identifier test

@@ -7682,6 +7682,14 @@ rollup-plugin-sourcemaps@^0.5.0:
     "@rollup/pluginutils" "^3.0.1"
     source-map-resolve "^0.5.3"
 
+rollup-plugin-ts-paths@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-ts-paths/-/rollup-plugin-ts-paths-1.0.5.tgz#bc43245b400d5a87df90191ac74ef184a45ae9be"
+  integrity sha512-Ca2FK0SEb6SicXQAAyI6Lfibyd7BNuTUERnMS8Dl28sYDS2vu/i8L012FMRjNcuHFzQTlU3QUpb+t4wP/Qb7Kw==
+  dependencies:
+    strip-bom "^4.0.0"
+    strip-json-comments "^3.0.1"
+
 rollup-plugin-typescript2@^0.27.0:
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.27.0.tgz#95ff96f9e07d5000a9d2df4d76b548f9a1f83511"
@@ -8389,6 +8397,11 @@ strip-json-comments@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.0.1.tgz#85713975a91fb87bf1b305cca77395e40d2a64a7"
   integrity sha512-VTyMAUfdm047mwKl+u79WIdrZxtFtn+nBxHeb844XBQ9uMNTuTHdx2hc5RiAJYqwTj3wc/xe5HLSdJSkJ+WfZw==
+
+strip-json-comments@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.0.tgz#7638d31422129ecf4457440009fba03f9f9ac180"
+  integrity sha512-e6/d0eBu7gHtdCqFt0xJr642LdToM5/cN4Qb9DbHjVx1CP5RyeM+zH7pbecEmDv/lBqb0QH+6Uqq75rxFPkM0w==
 
 strip-json-comments@~2.0.1:
   version "2.0.1"

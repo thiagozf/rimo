@@ -1,4 +1,4 @@
-import { EntityId } from '../src/EntityId'
+import { EntityId } from '@rimo/core'
 
 /**
  * EntityId test

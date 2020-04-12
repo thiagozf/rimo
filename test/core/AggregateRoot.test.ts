@@ -1,8 +1,4 @@
-import { AggregateRoot } from '../src/AggregateRoot'
-import { DomainEvent } from '../src/DomainEvent'
-import { EntityId } from '../src/EntityId'
-import { DomainEventHandler } from '../src/DomainEventHandler'
-import { DomainEvents } from '../src/DomainEvents'
+import { AggregateRoot, DomainEvent, EntityId, DomainEventHandler, DomainEvents } from '@rimo/core'
 
 class PostFollowed implements DomainEvent {
   public static type: string = 'PostFollowed'

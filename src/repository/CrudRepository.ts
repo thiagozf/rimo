@@ -1,8 +1,12 @@
 import { Entity, EntityId } from '@rimo/core'
+import { Either } from '@rimo/monad'
 import { Repository } from './Repository'
 
 /**
  * Interface for generic CRUD operations on a repository for a specific entity.
+ *
+ * It is assumed that all operations are asynchronous and could fail, thus
+ * returning an {@linkcode Either} monad.
  *
  * @typeParam T the entity type the repository manages
  * @typeParam ID the type of the id of the entity the repository manages
@@ -16,7 +20,7 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param entity to save.
    * @return the saved entity.
    */
-  save: <S extends T>(entity: S) => Promise<S>
+  save: <E extends Error, S extends T>(entity: S) => Promise<Either<E, S>>
 
   /**
    * Saves all given entities.
@@ -24,7 +28,7 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param entities to save.
    * @return the saved entities.
    */
-  saveAll: <S extends T>(entities: S[]) => Promise<S[]>
+  saveAll: <E extends Error, S extends T>(entities: S[]) => Promise<Either<E, S[]>>
 
   /**
    * Retrieves an entity by its ID.
@@ -32,7 +36,7 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param id of the entity.
    * @return the entity with the given ID or `undefined` if none found.
    */
-  findById: (id: ID) => Promise<T | undefined>
+  findById: <E extends Error>(id: ID) => Promise<Either<E, T | undefined>>
 
   /**
    * Returns whether an entity with the given ID exists.
@@ -40,14 +44,14 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param id of the entity.
    * @return `true` if an entity with the given id exists, `false` otherwise.
    */
-  existsById: (id: ID) => Promise<boolean>
+  existsById: <E extends Error>(id: ID) => Promise<Either<E, boolean>>
 
   /**
    * Returns all instances of the type.
    *
    * @return all entities
    */
-  findAll: () => Promise<T[]>
+  findAll: <E extends Error>() => Promise<Either<E, T[]>>
 
   /**
    * Returns all instances of the type `T` with the given IDs.
@@ -59,33 +63,33 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param ids of entities to be retuned.
    * @return the entities.
    */
-  findAllById: (ids: ID[]) => Promise<T[]>
+  findAllById: <E extends Error>(ids: ID[]) => Promise<Either<E, T[]>>
 
   /**
    * Returns the number of entities.
    *
    * @return the number of entities.
    */
-  count: () => Promise<number>
+  count: <E extends Error>() => Promise<Either<E, number>>
 
   /**
    * Deletes the entity with the given id.
    *
    * @param id of entity to delete.
    */
-  deleteById: (id: ID) => Promise<void>
+  deleteById: <E extends Error>(id: ID) => Promise<Either<E, void>>
 
   /**
    * Deletes a given entity.
    *
    * @param entity to delete.
    */
-  delete: (entity: T) => Promise<void>
+  delete: <E extends Error>(entity: T) => Promise<Either<E, void>>
 
   /**
    * Deletes the given entities, or all when no arguments are provided.
    *
    * @param entities to delete or `undefined` to delete all.
    */
-  deleteAll: (entities?: T[]) => Promise<void>
+  deleteAll: <E extends Error>(entities?: T[]) => Promise<Either<E, void>>
 }

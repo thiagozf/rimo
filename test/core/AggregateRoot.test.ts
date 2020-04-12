@@ -109,8 +109,8 @@ describe('Entity test', () => {
 
   it('should be able to create domain events', () => {
     const stats = new PostStats()
-    new PostLikesAggregatorHandler(stats)
-    new PostLikesNotificationHandler()
+    const aggregatorHandler = new PostLikesAggregatorHandler(stats)
+    const notificationHandler = new PostLikesNotificationHandler()
 
     const post = new Post({})
     post.like('thiagozf')

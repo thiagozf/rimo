@@ -12,7 +12,10 @@
   "author": "Thiago Zanivan <hi+github@thiagozf.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/thiagozf/rimo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thiagozf/rimo/issues"
   },
   "license": "MIT",
   "engines": {

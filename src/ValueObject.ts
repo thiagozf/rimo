@@ -1,4 +1,4 @@
-import { cloneDeep, isEqual } from 'lodash'
+import { isEqual, cloneDeep } from 'lodash'
 import { Object } from './Object'
 
 /**

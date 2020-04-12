@@ -3,7 +3,7 @@
 <br />
 
 <div align="center"><strong>Build rich data models with Rimo!</strong></div>
-<div align="center">Rimo is an extensible set of functions that helps you to build rich domain data models through composition.</div>
+<div align="center">Rimo is an extensible set of utilities that helps you to build rich domain data models.</div>
 
 <br />
 

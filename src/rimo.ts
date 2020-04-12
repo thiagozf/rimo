@@ -1,6 +1,9 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-  // import "core-js/fn/array.find"
-  // ...
-export default class DummyClass {
-
-}
+export * from './AggregateRoot'
+export * from './DomainEvent'
+export * from './DomainEventHandler'
+export * from './DomainEvents'
+export * from './Entity'
+export * from './EntityId'
+export * from './Identifier'
+export * from './Object'
+export * from './ValueObject'

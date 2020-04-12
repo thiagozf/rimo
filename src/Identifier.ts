@@ -8,7 +8,7 @@ export class Identifier<T extends PrimitiveIdentifier> implements Object {
   }
 
   equals(id?: Identifier<T>): boolean {
-    if (id === null || id === undefined) {
+    if (id === undefined) {
       return false
     }
 

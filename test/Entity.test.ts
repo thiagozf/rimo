@@ -24,7 +24,7 @@ describe('Entity test', () => {
     expect(post.equals(new Post({ title: 'Why Rimo rocks' }, id))).toBeTruthy()
     expect(post.equals(post)).toBeTruthy()
     expect(post.equals(new (class Blog extends Entity<{}> {})({}) as Post)).toBeFalsy()
-    expect(post.equals((null as unknown) as Post)).toBeFalsy()
+    expect(post.equals((undefined as unknown) as Post)).toBeFalsy()
     expect(post.equals({} as Post)).toBeFalsy()
   })
 })

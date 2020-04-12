@@ -33,7 +33,7 @@ export abstract class ValueObject<T extends ValueObjectProps> implements Object 
   }
 
   public equals(vo?: ValueObject<T>): boolean {
-    if (vo === null || vo === undefined) {
+    if (vo === undefined) {
       return false
     }
 

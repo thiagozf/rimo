@@ -35,7 +35,7 @@ export abstract class Entity<T> implements Object {
   }
 
   public equals(object?: Entity<T>): boolean {
-    if (object == null || object == undefined) {
+    if (object === undefined) {
       return false
     }
 

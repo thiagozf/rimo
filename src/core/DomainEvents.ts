@@ -11,10 +11,11 @@ export class DomainEvents {
   private static markedAggregates: AggregateRoot<any>[] = []
 
   /**
-   * @static
-   * @desc Called by aggregate root objects that have created domain
+   * Called by aggregate root objects that have created domain
    * events to eventually be dispatched when the infrastructure commits
    * the unit of work.
+   *
+   * @static
    */
   public static markAggregateForDispatch(aggregate: AggregateRoot<any>): void {
     const aggregateFound = !!this.findMarkedAggregateByID(aggregate.id)

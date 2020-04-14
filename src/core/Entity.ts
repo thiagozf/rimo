@@ -15,6 +15,13 @@ const isEntity = (v: unknown): v is Entity<any> => {
  *
  * ```typescript
  * class Post extends Entity<{ title: string; content: string }> {
+ *   get title() {
+ *     return this.props.title
+ *   }
+ *
+ *   get content() {
+ *     return this.props.content
+ *   }
  * }
  *
  * const post = new Post({ title: 'Hello Rimo!', content: 'You are amazing :)' })
@@ -32,6 +39,10 @@ export abstract class Entity<T> implements Object {
   constructor(props: T, id: EntityId = new EntityId()) {
     this._id = id
     this.props = props
+  }
+
+  get id(): EntityId {
+    return this._id
   }
 
   public equals(object?: Entity<T>): boolean {

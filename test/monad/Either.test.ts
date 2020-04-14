@@ -1,4 +1,4 @@
-import { Either, Left, Right, left, right, isLeft, isRight } from '@rimo/monad'
+import { Either, left, right, isLeft, isRight } from '@rimo/monad'
 
 /**
  * Either test

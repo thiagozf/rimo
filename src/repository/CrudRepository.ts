@@ -35,7 +35,7 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param id of the entity.
    * @return the entity with the given ID or `undefined` if none found.
    */
-  findById: <E extends Error>(id: ID) => Promise<T | undefined>
+  findById: (id: ID) => Promise<T | undefined>
 
   /**
    * Returns whether an entity with the given ID exists.
@@ -43,14 +43,14 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param id of the entity.
    * @return `true` if an entity with the given id exists, `false` otherwise.
    */
-  existsById: <E extends Error>(id: ID) => Promise<boolean>
+  existsById: (id: ID) => Promise<boolean>
 
   /**
    * Returns all instances of the type.
    *
    * @return all entities
    */
-  findAll: <E extends Error>() => Promise<T[]>
+  findAll: () => Promise<T[]>
 
   /**
    * Returns all instances of the type `T` with the given IDs.
@@ -62,33 +62,33 @@ export interface CrudRepository<T extends Entity<any>, ID extends EntityId>
    * @param ids of entities to be retuned.
    * @return the entities.
    */
-  findAllById: <E extends Error>(ids: ID[]) => Promise<T[]>
+  findAllById: (ids: ID[]) => Promise<T[]>
 
   /**
    * Returns the number of entities.
    *
    * @return the number of entities.
    */
-  count: <E extends Error>() => Promise<number>
+  count: () => Promise<number>
 
   /**
    * Deletes the entity with the given id.
    *
    * @param id of entity to delete.
    */
-  deleteById: <E extends Error>(id: ID) => Promise<void>
+  deleteById: (id: ID) => Promise<void>
 
   /**
    * Deletes a given entity.
    *
    * @param entity to delete.
    */
-  delete: <E extends Error>(entity: T) => Promise<void>
+  delete: (entity: T) => Promise<void>
 
   /**
    * Deletes the given entities, or all when no arguments are provided.
    *
    * @param entities to delete or `undefined` to delete all.
    */
-  deleteAll: <E extends Error>(entities?: T[]) => Promise<void>
+  deleteAll: (entities?: T[]) => Promise<void>
 }

@@ -1,5 +1,6 @@
 import { Object } from './Object'
 import { EntityId } from './EntityId'
+import { cloneDeep } from 'lodash'
 
 const isEntity = (v: unknown): v is Entity<any> => {
   return v instanceof Entity
@@ -38,7 +39,7 @@ export abstract class Entity<T> implements Object {
 
   constructor(props: T, id: EntityId = new EntityId()) {
     this._id = id
-    this.props = props
+    this.props = cloneDeep(props)
   }
 
   get id(): EntityId {

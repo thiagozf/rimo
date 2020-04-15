@@ -85,7 +85,7 @@ describe('CommandRunner test', () => {
 
     it('should notify subscribers', async () => {
       const input = CreateUserInput.populate({ email: 'hi+github@thiagozf.com' })
-      const output = await runner.run(CreateUserCommand, input)
+      await runner.run(CreateUserCommand, input)
       expect(watchers.before).toStrictEqual([2, 1, 0])
       expect(watchers.after).toHaveLength(1)
     })

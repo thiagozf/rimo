@@ -32,15 +32,12 @@ export class UpdatePost implements CommandHandler<UpdatePostInput, PostOutput | 
 
   handle = async (event: unknown): Promise<PostOutput | undefined> => {
     const input = await toUpdatePostInput(event)
-
     const post: Post | undefined = await this.postRepository.findById(input.id)
     if (!post) {
       return undefined
     }
-
-    post.updateProps(input.payload)
+    post.populate(input.payload)
     const updatedPost: Post = await this.postRepository.save(post)
-
     return toUpdatePostOutput(updatedPost)
   }
 }

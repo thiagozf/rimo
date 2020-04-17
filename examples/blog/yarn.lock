@@ -857,6 +857,11 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.19.1.tgz#33509849f8e679e4add158959fdb086440e9553f"
   integrity sha512-5qOlnZscTn4xxM5MeGXAMOsIOIKIbh9e85zJWfBRVPlRMEVawzoPhINYbRGkBZCI8LxvBe7tJCdWiarA99OZfQ==
 
+"@types/speakingurl@^13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@types/speakingurl/-/speakingurl-13.0.2.tgz#865dc309b4d61ea333ade3171e916e341aa26137"
+  integrity sha512-cjvqDCGdWKSu2FjqpRXqaonLseH99w8AyLVo6Aytr/cUygXRF4fIBS/85qJ1t7t7ncInbi6WQCrsdGbknjvjHA==
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -3912,9 +3917,9 @@ ret@~0.1.10:
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
 rimo@latest:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/rimo/-/rimo-1.2.0.tgz#a233967aa7aac85501abccf2b7ddca330a2b1da8"
-  integrity sha512-Pn4S/Z3sjIr5tl+/8GWl2WQidpZD7xtYXOpn1tKnol95oo++kF//WFalhpPVkTK6wtvSvgxxpEttX+BDEGXYPg==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/rimo/-/rimo-1.2.1.tgz#ccfa9e5ed1e258d9b12e89e35e148132e89bba23"
+  integrity sha512-opI0esHgCsTfS3cFrvEFoFUBhCEof6SW2zwEoQ45XdxIkYJjHPkhfGroZFyojszWUcn/gSlb4nk4puuxS09bLw==
 
 rimraf@^2.6.1:
   version "2.7.1"

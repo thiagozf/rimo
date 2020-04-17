@@ -32,7 +32,8 @@ export class CreatePost implements CommandHandler<CreatePostInput, PostOutput> {
 
   handle = async (event: unknown): Promise<PostOutput> => {
     const input = await toCreatePostInput(event)
-    const post: Post = await this.postRepository.save(new Post(input))
-    return toCreatePostOutput(post)
+    const post: Post = new Post(input)
+    const saved = await this.postRepository.save(post)
+    return toCreatePostOutput(saved)
   }
 }

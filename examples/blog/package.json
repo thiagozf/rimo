@@ -1,0 +1,71 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "scripts": {
+    "db:migrate": "knex migrate:latest",
+    "start": "ts-node-dev src/index.ts",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/joi": "^17.1.1",
+    "class-transformer": "^0.2.3",
+    "class-transformer-validator": "^0.8.0",
+    "class-validator": "^0.11.1",
+    "inversify": "^5.0.1",
+    "knex": "^0.20.13",
+    "lodash": "^4.17.15",
+    "reflect-metadata": "^0.1.13",
+    "rimo": "latest",
+    "speakingurl": "^14.0.1",
+    "sqlite3": "^4.1.1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/hapi__boom": "^9.0.1",
+    "@types/hapi__hapi": "^19.0.2",
+    "@types/hapi__joi": "^16.0.12",
+    "@types/jest": "^25.2.1",
+    "@types/knex": "^0.16.1",
+    "@types/lodash": "^4.14.149",
+    "@types/speakingurl": "^13.0.2",
+    "jest": "^25.3.0",
+    "jest-config": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest.setup.ts"
+    ],
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/src/index.ts/",
+      "/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ]
+  }
+}

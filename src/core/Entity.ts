@@ -1,4 +1,5 @@
 import { cloneDeep } from 'lodash'
+import { PartialDeep } from 'type-fest'
 import { Object } from './Object'
 import { EntityId } from './EntityId'
 
@@ -37,12 +38,12 @@ export abstract class Entity<T> implements Object {
   protected readonly _id: EntityId
   public readonly props: T = {} as T
 
-  constructor(props: T, id: EntityId = new EntityId()) {
+  constructor(props: PartialDeep<T>, id: EntityId = new EntityId()) {
     this._id = id
     this.populate(props)
   }
 
-  public populate(props: T): void {
+  public populate(props: PartialDeep<T>): void {
     Object.assign(this.props, cloneDeep(props))
   }
 

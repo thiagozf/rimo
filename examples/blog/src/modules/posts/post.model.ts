@@ -1,5 +1,6 @@
 import { AggregateRoot, EntityId } from 'rimo'
 import { PartialDeep } from 'type-fest'
+import { IsNotEmpty, MaxLength } from 'class-validator'
 import getSlug from 'speakingurl'
 
 export class PostId extends EntityId {}
@@ -21,21 +22,26 @@ export class Post extends AggregateRoot<PostProps> {
     this.props.author = props.author || this.props.author
     this.props.content = props.content || this.props.content
     this.props.title = props.title || this.props.title
+    this.props.slug = getSlug(this.props.title)
   }
 
-  set title(title: string) {
-    this.props.slug = getSlug(title)
-    this.props.title = title
+  @IsNotEmpty()
+  get slug() {
+    return this.props.slug
   }
 
+  @IsNotEmpty()
+  @MaxLength(100)
   get title() {
     return this.props.title
   }
 
+  @IsNotEmpty()
   get content() {
     return this.props.content
   }
 
+  @IsNotEmpty()
   get author() {
     return this.props.author
   }

@@ -3917,9 +3917,9 @@ ret@~0.1.10:
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
 rimo@latest:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/rimo/-/rimo-1.2.1.tgz#ccfa9e5ed1e258d9b12e89e35e148132e89bba23"
-  integrity sha512-opI0esHgCsTfS3cFrvEFoFUBhCEof6SW2zwEoQ45XdxIkYJjHPkhfGroZFyojszWUcn/gSlb4nk4puuxS09bLw==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/rimo/-/rimo-1.2.2.tgz#36c6ab0f85075ed5ef0134bc8e1039b2b39ea743"
+  integrity sha512-hHND5E5mr+2uND7Me6B+NhUePTLfoaoutjauJd5f0onYmZPUeqMidNNRYeK8MxkhC7hegPZ4pLYbDb8g02ZhhQ==
 
 rimraf@^2.6.1:
   version "2.7.1"
@@ -4152,6 +4152,11 @@ spdx-license-ids@^3.0.0:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz#3694b5804567a458d3c8045842a6358632f62654"
   integrity sha512-J+FWzZoynJEXGphVIS+XEh3kFSjZX/1i9gFBaWQcB+/tmpe2qUsSBABpcxqxnAxFdiUFEgAX1bjYGQvIZmoz9Q==
+
+speakingurl@^14.0.1:
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/speakingurl/-/speakingurl-14.0.1.tgz#f37ec8ddc4ab98e9600c1c9ec324a8c48d772a53"
+  integrity sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"

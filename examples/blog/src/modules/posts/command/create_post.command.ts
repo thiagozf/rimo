@@ -34,6 +34,6 @@ export class CreatePost implements CommandHandler<CreatePostInput, PostOutput> {
     const input = await toCreatePostInput(event)
     const post: Post = new Post(input)
     const saved = await this.postRepository.save(post)
-    return toCreatePostOutput(saved)
+    return await toCreatePostOutput(saved)
   }
 }

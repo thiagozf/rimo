@@ -9,7 +9,7 @@ import { ValidationError } from '../../../error/ValidationError'
 const toUpdatePostInput = async (input: unknown) => {
   try {
     return await transformAndValidate(UpdatePostInput, input as object, {
-      validator: { whitelist: true },
+      validator: { whitelist: true, skipMissingProperties: true },
     })
   } catch (e) {
     throw new ValidationError(e)

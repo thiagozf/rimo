@@ -2,12 +2,20 @@
 
 <br />
 
-<div align="center"><strong>Build rich data models with Rimo!</strong></div>
-<div align="center">Rimo is an extensible set of utilities that helps you to build rich domain data models.</div>
+<div align="center"><strong>Build rich domain models with Rimo!</strong></div>
+<div align="center">Rimo is a set of utilities that helps you to implement a clean architecture in TypeScript.</div>
 
 <br />
 
 <div align="center">
+  <!-- NPM Package -->
+  <a href="https://badge.fury.io/js/rimo">
+    <img src="https://badge.fury.io/js/rimo.svg" alt="NPM Package" />
+  </a>
+  <!-- Install Size -->
+  <a href="https://packagephobia.now.sh/result?p=rimo@1.2.3">
+    <img src="https://packagephobia.now.sh/badge?p=rimo@1.2.3" alt="Install Size" />
+  </a>
   <!-- Dependency Status -->
   <a href="https://david-dm.org/thiagozf/rimo">
     <img src="https://david-dm.org/thiagozf/rimo.svg" alt="Dependency Status" />
@@ -24,13 +32,13 @@
   <a href="https://snyk.io/test/github/thiagozf/rimo">
     <img src="https://snyk.io/test/github/thiagozf/rimo/badge.svg" />
   </a>
-  <!-- Travis -->
-  <a href="https://travis-ci.org/thiagozf/rimo">
-    <img src="https://img.shields.io/travis/thiagozf/rimo.svg" />
-  </a>
   <!-- Coveralls -->
   <a href="https://coveralls.io/github/thiagozf/rimo">
     <img src="https://img.shields.io/coveralls/thiagozf/rimo.svg" />
+  </a>
+  <!-- Travis -->
+  <a href="https://travis-ci.org/thiagozf/rimo">
+    <img src="https://img.shields.io/travis/thiagozf/rimo.svg" />
   </a>
 </div>
 
@@ -41,7 +49,64 @@
 
 ## Usage
 
-TODO :)
+```typescript
+import { AggregageRoot } from 'rimo'
+
+// Create an aggregate root
+class User extends AggregateRoot<{ email: string }> {
+  get email() {
+    return this.props.email
+  }
+}
+
+// Define inputs and/or outputs
+class CreateUserInput {
+  @IsNotEmpty()
+  @IsEmail()
+  email!: string
+
+  static populate = (data: any) => {
+    return Object.assign(new CreateUserInput(), data)
+  }
+}
+
+// Create a use case
+import { CommandHandler, Use } from 'rimo'
+
+class CreateUserCommand implements CommandHandler<CreateUserInput, User> {
+  @Use(ValidateCommand)
+  async handle(input: CreateUserInput): Promise<User> {
+    const user: User = new User(input)
+    // persist user, do other stuff
+    return user
+  }
+}
+
+// Keep your use cases clean with the help of middlewares
+// to do things like validation
+import { Middleware } from 'rimo'
+
+class ValidateCommand implements Middleware<CreateUserInput> {
+  async use(event: CreateUserInput) {
+    const errors = await validate(event)
+    if (errors.length > 0) {
+      throw new Error('validation error')
+    }
+  }
+}
+
+// Use the stupid simple, yet powerful, pub/sub mechanism that Rimo
+// provides to keep your application components nicely decoupled!
+import { AfterCommand, CommandRunner } from 'rimo'
+
+class CreateUserSubscriber {
+  @AfterCommand(CreateUserCommand)
+  async afterCreateUser(user: User, runner: CommandRunner) {
+    // SendWelcomeEmail is another use case
+    await runner.run(SendWelcomeEmail, user)
+  }
+}
+```
 
 ## Credits
 

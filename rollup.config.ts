@@ -1,5 +1,4 @@
 import resolve from 'rollup-plugin-node-resolve'
-import builtins from 'rollup-plugin-node-builtins'
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
@@ -22,8 +21,6 @@ export default {
     include: 'src/**',
   },
   plugins: [
-    // Allow node built-ins
-    builtins(),
     // Allow json resolution
     json(),
     // Compile TypeScript files

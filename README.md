@@ -13,8 +13,8 @@
     <img src="https://badge.fury.io/js/rimo.svg" alt="NPM Package" />
   </a>
   <!-- Install Size -->
-  <a href="https://packagephobia.now.sh/result?p=rimo@1.2.3">
-    <img src="https://packagephobia.now.sh/badge?p=rimo@1.2.3" alt="Install Size" />
+  <a href="https://packagephobia.now.sh/result?p=rimo">
+    <img src="https://packagephobia.now.sh/badge?p=rimo" alt="Install Size" />
   </a>
   <!-- Dependency Status -->
   <a href="https://david-dm.org/thiagozf/rimo">

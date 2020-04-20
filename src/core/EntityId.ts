@@ -1,4 +1,4 @@
-import shortid from 'shortid'
+import { nanoid } from 'nanoid'
 import { Identifier, PrimitiveIdentifier } from './Identifier'
 
 /**
@@ -6,6 +6,6 @@ import { Identifier, PrimitiveIdentifier } from './Identifier'
  */
 export class EntityId extends Identifier<PrimitiveIdentifier> {
   constructor(id?: PrimitiveIdentifier) {
-    super(id ? id : shortid())
+    super(id ? id : nanoid())
   }
 }

@@ -16,7 +16,7 @@
     "class-validator": "^0.12.1",
     "inversify": "^5.0.1",
     "knex": "^0.20.13",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "reflect-metadata": "^0.1.13",
     "rimo": "latest",
     "speakingurl": "^14.0.1",

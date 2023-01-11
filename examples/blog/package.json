@@ -15,7 +15,7 @@
     "class-transformer-validator": "^0.8.0",
     "class-validator": "^0.12.1",
     "inversify": "^5.0.1",
-    "knex": "^0.20.13",
+    "knex": "^2.4.0",
     "lodash": "^4.17.15",
     "reflect-metadata": "^0.1.13",
     "rimo": "latest",
